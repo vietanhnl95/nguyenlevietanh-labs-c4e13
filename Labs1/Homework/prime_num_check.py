@@ -7,7 +7,7 @@ while x > 0:
         count += 1
     x = x - 1
 
-if 0 < x and count == 2:
+if 0 < n and count == 2:
     print(n, "is a prime number")
 else:
     print(n, "is not a prime number")
