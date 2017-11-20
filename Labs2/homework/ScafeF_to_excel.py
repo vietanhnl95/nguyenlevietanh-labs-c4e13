@@ -33,11 +33,13 @@ for tr in tr_list:
             data = "NA"
         else:
             data = data.replace('  ','').replace('\n','').replace('\r','')
-        print(key_list[i])
-        print(data)
+        # print(key_list[i])
+        # print(data)
         new_dict[key_list[i]] = data
-    excel_input.append(new_dict)
-# print(excel_input)
+    # print(new_dict)
+    excel_input.append(new_dict.copy())
+
+print(excel_input)
 
 import pyexcel
 pyexcel.save_as(records = excel_input, dest_file_name= 'VNM.xls')
