@@ -13,13 +13,14 @@ def generate_quiz():
 # print(generate_quiz())
 
 def check_answer(x, y, op, result, user_choice):
+    true_result = int(eval("{0} {1} {2}".format(x,op,y)))
     if user_choice:
-        if int(eval("{0} {1} {2}".format(x,op,y))) == result:
+        if true_result == result:
             return True
         else:
             return False
     else:
-        if int(eval("{0} {1} {2}".format(x,op,y))) == result:
+        if true_result == result:
             return False
         else:
             return True
