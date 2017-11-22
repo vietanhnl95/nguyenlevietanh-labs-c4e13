@@ -15,12 +15,6 @@ def generate_quiz():
 def check_answer(x, y, op, result, user_choice):
     true_result = int(eval("{0} {1} {2}".format(x,op,y)))
     if user_choice:
-        if true_result == result:
-            return True
-        else:
-            return False
+        return true_result == result
     else:
-        if true_result == result:
-            return False
-        else:
-            return True
+        return true_result != result
